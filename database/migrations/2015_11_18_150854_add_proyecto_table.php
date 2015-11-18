@@ -12,17 +12,17 @@ class AddProyectoTable extends Migration
      */
     public function up()
     {
-        Schema::create('Proyectos', function (Blueprint $table) {
+        Schema::create('Proyecto', function (Blueprint $table) {
             $table->increments('id');
             $table->string('Codigo', 10)->unique();
             $table->string('Nombre');
-            $table->enum('Estado', ['Creado','Desarrollo','Cerrado']);
+            $table->enum('Estado', ['Creado','Desarrollo','Cerrado'])->default('Creado');
             $table->integer('cliente_id')->unsigned();
             $table->integer('usuario_id')->unsigned();
             $table->timestamps();
 
             $table->foreign('cliente_id')
-                    ->references('id')->on('clientes');
+                    ->references('id')->on('Cliente');
 
             $table->foreign('usuario_id')
                     ->references('id')->on('users');

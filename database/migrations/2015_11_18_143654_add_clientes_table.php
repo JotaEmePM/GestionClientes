@@ -12,7 +12,7 @@ class AddClientesTable extends Migration
      */
     public function up()
     {
-        Schema::create('clientes', function (Blueprint $table) {
+        Schema::create('Cliente', function (Blueprint $table) {
             $table->increments('id');
             $table->string('Nombre');
             $table->string('Direccion');
