@@ -1,7 +1,5 @@
 @extends('main.template.main')
-
-@section('title', 'Home')
-
+@section('title', 'Creación de usuarios')
 @section('content')
-	<h1>Hola mundo</h1>
+    Hola mundo
 @endsection
